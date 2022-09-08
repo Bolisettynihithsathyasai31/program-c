@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+  int num, i, *ptr, sum=0;
+
+  printf("Enter the number of elements: ");
+  scanf("%d", &num);
+  ptr= (int*) malloc (num*sizeof(int));
+  printf("Enter %d elements :\n",num);
+  for(i=0;i<num;i++)
+  {
+     scanf("%d",ptr+i);
+     sum += *(ptr+i);
+  }
+  printf("Sum= %d",sum);
+  return 0;
+
+Example:
+Input:
+5
+Output:
+Yes
+Explanation: if you take fibonacci series 0 0 1 1 2 3 5. Because 5 is
+Example 2:
+Input:
+4
+Output:
+No
